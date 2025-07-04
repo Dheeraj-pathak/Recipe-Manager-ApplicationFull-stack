@@ -1,0 +1,24 @@
+<h2 class="mb-4">📝 Register</h2>
+
+{{#if errors}}
+  <div class="alert alert-danger">
+    <ul>
+      {{#each errors}}
+        <li>{{this.msg}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+
+<form action="/users/register" method="POST" class="p-3 border rounded shadow">
+  <div class="mb-3">
+    <label>Username</label>
+    <input type="text" name="username" class="form-control" value="{{username}}" required>
+  </div>
+  <div class="mb-3">
+    <label>Password</label>
+    <input type="password" name="password" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+  <a href="/users/login" class="btn btn-link">Already registered?</a>
+</form>

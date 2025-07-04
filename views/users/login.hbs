@@ -1,0 +1,26 @@
+<h2 class="mb-4">🔐 Login</h2>
+
+{{#if error}}
+  <div class="alert alert-danger">
+    <p>{{error}}</p>
+  </div>
+{{/if}}
+
+{{#if success_msg}}
+  <div class="alert alert-success">
+    <p>{{success_msg}}</p>
+  </div>
+{{/if}}
+
+<form action="/users/login" method="POST" class="p-3 border rounded shadow">
+  <div class="mb-3">
+    <label>Username</label>
+    <input type="text" name="username" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label>Password</label>
+    <input type="password" name="password" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-success">Login</button>
+  <a href="/users/register" class="btn btn-link">Need an account?</a>
+</form>

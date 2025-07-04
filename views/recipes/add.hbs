@@ -1,0 +1,26 @@
+<h1 class="mb-4">➕ Add New Recipe</h1>
+
+<form action="/recipes/add" method="POST" enctype="multipart/form-data">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" name="title" id="title" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="ingredients" class="form-label">Ingredients</label>
+    <textarea class="form-control" name="ingredients" id="ingredients" rows="3" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="instructions" class="form-label">Instructions</label>
+    <textarea class="form-control" name="instructions" id="instructions" rows="5" required></textarea>
+  </div>
+  <div class="mb-3">
+  <label for="image" class="form-label">Recipe Image (optional)</label>
+  <input type="file" class="form-control" name="image" id="image">
+</div>
+
+
+  <button type="submit" class="btn btn-success">Add Recipe</button>
+</form>

@@ -1,0 +1,27 @@
+<h1 class="mb-4">🍽️ All Recipes</h1>
+<a href="/recipes/add" class="btn btn-primary mb-4">➕ Add Recipe</a>
+
+{{#if recipes.length}}
+  <div class="row">
+    {{#each recipes}}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          {{#if image}}
+            <img src="/uploads/{{image}}" class="card-img-top">
+
+          {{/if}}
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p><strong>Ingredients:</strong><br>{{ingredients}}</p>
+            <p><strong>Instructions:</strong><br>{{instructions}}</p>
+            <a href="/recipes/edit/{{this._id}}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/recipes/delete/{{this._id}}" class="btn btn-danger btn-sm" onclick="return confirm('Delete this recipe?')">Delete</a>
+
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p>No recipes found. Add your first one!</p>
+{{/if}}
