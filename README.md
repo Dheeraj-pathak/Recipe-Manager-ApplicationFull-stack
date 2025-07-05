@@ -2,7 +2,7 @@
 
 A full-featured recipe management app built with Node.js, Express, MongoDB, and Passport.js. Users can register, login, and manage their personal collection of recipes — complete with image uploads.
 
-🌐 **Live Demo**: [https://recipe-manager-s9t9.onrender.com](https://recipe-manager-x3of.onrender.com)
+🌐 **Live Demo**: [Dheeraj's Recipe manager](https://recipe-manager-x3of.onrender.com)
 ---
 
 ## 🚀 Features
